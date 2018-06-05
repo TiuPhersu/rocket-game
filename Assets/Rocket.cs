@@ -20,15 +20,20 @@ public class Rocket : MonoBehaviour {
     private void ProcessInput() {
         // thrust while rotating
         if (Input.GetKey(KeyCode.Space)) {
+            //moves up
             print("boost");
             rigidBody.AddRelativeForce(Vector3.up);
         }
 
         // control directions
         if (Input.GetKey(KeyCode.A)) {
+            //move to the left
+            transform.Rotate(Vector3.forward);
             print("Rotating left");
         }
         else if (Input.GetKey(KeyCode.D)) {
+            //move to the right
+            transform.Rotate(Vector3.back);
             print("Rotating right");
         }
     }
