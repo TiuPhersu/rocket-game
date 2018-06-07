@@ -284,6 +284,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1066858779385854, guid: aced1065715019b4481382fb993f6e58, type: 2}
+      propertyPath: m_TagString
+      value: Friendly
+      objectReference: {fileID: 0}
+    - target: {fileID: 23518000305691236, guid: aced1065715019b4481382fb993f6e58,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 81bb463856f7b1148ad35177552e68b7, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aced1065715019b4481382fb993f6e58, type: 2}
   m_IsPrefabParent: 0
@@ -370,7 +379,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1066858779385854, guid: aced1065715019b4481382fb993f6e58, type: 2}
       propertyPath: m_Name
-      value: Landing Pad (1)
+      value: Fuel Pad
       objectReference: {fileID: 0}
     - target: {fileID: 4990566667700724, guid: aced1065715019b4481382fb993f6e58, type: 2}
       propertyPath: m_LocalScale.x
@@ -384,6 +393,15 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 2.3655233
       objectReference: {fileID: 0}
+    - target: {fileID: 1066858779385854, guid: aced1065715019b4481382fb993f6e58, type: 2}
+      propertyPath: m_TagString
+      value: Fuel
+      objectReference: {fileID: 0}
+    - target: {fileID: 23518000305691236, guid: aced1065715019b4481382fb993f6e58,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 81bb463856f7b1148ad35177552e68b7, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aced1065715019b4481382fb993f6e58, type: 2}
   m_IsPrefabParent: 0
@@ -480,6 +498,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 9.244412
       objectReference: {fileID: 0}
+    - target: {fileID: 23518000305691236, guid: aced1065715019b4481382fb993f6e58,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a2e38bcef94ece544a26621bfd14b2ad, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aced1065715019b4481382fb993f6e58, type: 2}
   m_IsPrefabParent: 0

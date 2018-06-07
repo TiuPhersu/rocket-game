@@ -18,10 +18,24 @@ public class Rocket : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         Thrust();
         Rotate();
+    }
+
+    void OnCollisionEnter(Collision collision){
+        switch (collision.gameObject.tag) {
+            case "Friendly":
+                // do nothing
+                break;
+            case "Fuel":
+                print("Fuel");
+                break;
+            default:
+                print("Dead");
+                //Kill the player
+                break;
+        }
     }
 
     private void Thrust(){
