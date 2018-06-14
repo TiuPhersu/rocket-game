@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Rocket : MonoBehaviour
 {
@@ -28,12 +26,13 @@ public class Rocket : MonoBehaviour
             case "Friendly":
                 // do nothing
                 break;
-            case "Fuel":
-                print("Fuel");
+            case "Finish":
+                print("Goal");
+                SceneManager.LoadScene(1);
                 break;
             default:
                 print("Dead");
-                //Kill the player
+                SceneManager.LoadScene(0);
                 break;
         }
     }
