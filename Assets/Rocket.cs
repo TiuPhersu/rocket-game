@@ -5,9 +5,14 @@ using UnityEngine.SceneManagement;
 public class Rocket : MonoBehaviour{
     [SerializeField] float rcsThrust = 100f;
     [SerializeField] float mainThrust = 100f;
+
     [SerializeField] AudioClip mainEngine;
     [SerializeField] AudioClip death;
-    [SerializeField] AudioClip load;
+    [SerializeField] AudioClip success;
+
+    [SerializeField] ParticleSystem mainEngineParticles;
+    [SerializeField] ParticleSystem deathParticles;
+    [SerializeField] ParticleSystem successParticles;
 
     Rigidbody rigidBody;
     AudioSource audioSource;
@@ -44,51 +49,52 @@ public class Rocket : MonoBehaviour{
         }
     }
 
-    private void StartSuccessSequence()
-    {
+    private void StartSuccessSequence(){
         state = State.Transcending;
         audioSource.Stop();
-        audioSource.PlayOneShot(load);
+        audioSource.PlayOneShot(success);
+        successParticles.Play();
         Invoke("LoadNextLevel", 2f);//load to next scene after 1 second (paramerise time)
     }
 
-    private void StartDeathSequence()
-    {
+    private void StartDeathSequence(){
         state = State.Dying;
         audioSource.Stop();
         audioSource.PlayOneShot(death);
+        deathParticles.Play();
         Invoke("LoadFirstLevel", 2f);//load to first scene after 1 second (paramerise time)
     }
 
     private void LoadNextLevel() {
         SceneManager.LoadScene(1);// todo allow for more than 2 levels
+        successParticles.Stop();
     }
 
-    private void LoadFirstLevel()
-    {
-        SceneManager.LoadScene(0);// load first level
+    private void LoadFirstLevel(){
+        SceneManager.LoadScene(0);// load first 
+        deathParticles.Stop();
+
     }
 
     private void RespondToThrustInput(){
         // thrust while rotating
-        if (Input.GetKey(KeyCode.Space))
-        {
+        if (Input.GetKey(KeyCode.Space)) {
             ApplyThrust();
         }
-        else
-        {
+        else {
             audioSource.Stop();
+            mainEngineParticles.Stop();
         }
     }
 
-    private void ApplyThrust()
-    {
+    private void ApplyThrust(){
         //moves up
         rigidBody.AddRelativeForce(Vector3.up * mainThrust);
         if (!audioSource.isPlaying)
         {//so it doesn't layer
             audioSource.PlayOneShot(mainEngine);
         }
+        mainEngineParticles.Play();
     }
 
     private void RespondToRotateInput(){
