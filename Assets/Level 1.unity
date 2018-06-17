@@ -238,11 +238,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 440763522}
   m_LocalRotation: {x: -0, y: -0, z: -0.70448434, w: 0.70971954}
-  m_LocalPosition: {x: 9.6, y: 47.5, z: 0}
+  m_LocalPosition: {x: 9.6, y: 40.9, z: 0}
   m_LocalScale: {x: 62.579964, y: 1, z: 29.71459}
   m_Children:
-  - {fileID: 1306478607}
+  - {fileID: 1738453785}
   - {fileID: 910010810}
+  - {fileID: 1306478607}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -421,8 +422,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 910010809}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6780344, y: 17.586338, z: 0}
-  m_LocalScale: {x: 0.4272641, y: 1, z: 1}
+  m_LocalPosition: {x: 0.558, y: 17.586338, z: 0}
+  m_LocalScale: {x: 0.42726412, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 440763524}
   m_RootOrder: 1
@@ -553,11 +554,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1306478606}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6965602, y: -14.923138, z: 0}
-  m_LocalScale: {x: 0.60182315, y: 0.99990165, z: 1}
+  m_LocalPosition: {x: 0.579, y: -14.9231415, z: 0}
+  m_LocalScale: {x: 0.601823, y: 0.99990165, z: 1}
   m_Children: []
   m_Father: {fileID: 440763524}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.576004}
 --- !u!65 &1306478608
 BoxCollider:
@@ -732,7 +733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 599a766f4156c484bbc5676127b6720b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementVector: {x: 0, y: 0, z: 0}
+  movementVector: {x: 0, y: 20, z: 0}
   period: 2
   movementFactor: 0
 --- !u!65 &1738453782
@@ -799,12 +800,12 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1738453780}
-  m_LocalRotation: {x: -0, y: -0, z: -0.70448434, w: 0.70971954}
-  m_LocalPosition: {x: 9.6, y: 47.5, z: 0}
-  m_LocalScale: {x: 62.579956, y: 1, z: 29.71459}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 440763524}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.576004}
 --- !u!1001 &1771076912
 Prefab:
